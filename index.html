@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
+<script src="https://use.fontawesome.com/ed8b9827ed.js"></script>
+
+<head>
+<style>
+	* {
+		box-sizing:border-box;
+		padding:0;
+		margin:0;
+		font-family: 'Arima Madurai', cursive;
+	}
+	body {
+		background: #ffe4e4;
+	}
+	#container {
+		width:1000px;
+		min-height:100px;
+		margin:0 auto;
+	}
+	h1 {
+		text-align:center;
+		line-height:100px;
+		font-size:50px;
+		display:block;
+		}
+		h1 a{
+		text-decoration:none;
+		color: #ffe4e4;
+		padding:10px;
+		}
+	h1 a:hover {
+	color:#ffd4d4;
+	}
+	#heads {
+		background:#fffdfd;
+		height:150px;
+		width:100%;
+		margin-bottom:20px;
+		border-bottom: 1px solid #ffe4e4;
+		box-shadow: 0 10px 10px -8px #000000;
+		font-family: 'Vast Shadow', cursive;
+		}
+	#menu {
+		height:50px;
+		width:100%;
+		}
+	#menu ul {
+		text-align:center;
+	}
+	#menu li {
+		display:inline;
+		padding:0 20px 0 20px;
+		font-size:25px;
+	}
+		#menu li:first-child{
+		margin-left:-130px;
+	}
+	#menu li:hover {
+		background: #ffe4e4;
+	}
+	#menu li a {
+		color:black;
+		text-decoration:none;
+		padding:5px;
+	}
+	#conten {
+		background: #fffdfd;
+		border-radius:15px;
+		height:760px;
+		box-shadow: 0 10px 10px -8px #000000;
+	}
+	button.accordion {
+		background-color: #eee;
+		color: #444;
+		cursor: pointer;
+		padding: 18px;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		font-size: 20px;
+		transition: 0.4s;
+	}
+
+	button.accordion.active, button.accordion:hover {
+		background-color: #ddd;
+	}
+
+	button.accordion:after {
+		content: '\02795';
+		font-size: 13px;
+		color: #777;
+		float: right;
+		margin-left: 5px;
+	}
+
+	button.accordion.active:after {
+		content: "\2796";
+	}
+
+	div.panel {
+		padding: 0 18px;
+		background-color: #fffdfd;
+		max-height: 0;
+		overflow: hidden;
+		transition: 0.6s ease-in-out;
+		opacity: 0;
+	}
+
+	div.panel.show {
+		opacity: 1;
+		max-height: 500px;
+	}
+	#footer {
+		position:static;
+		bottom:0;
+		height:30px;
+		line-height:30px;
+		background:#fffdfd;
+		margin-top: 20px;
+		border: 1px solid #ffd4d4;
+		border-radius: 15px 15px 0 0;
+		text-align:center;
+	}
+#linkss {
+	position:relative;
+	bottom:80px;
+	float:left;
+	}
+	#linkss a {
+	padding:10px;
+	color:black;
+	font-size:20px;
+	}
+	
+</style>
+
+</head>
+<body>
+<div id="container">
+	
+	<div id="heads">
+	<h1><a href="./homepage.html">COOK</a></h1>
+	<div id="linkss">
+	<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+<a href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a>
+</div>
+	<div id="menu">
+	<ul>
+		<li><a href="./index.html">Index</a></li>
+		<li><a href="./FAQ.html">FAQ</a></li>
+	</ul>
+	</div>
+	</div>
+	
+	<div id="conten">
+		<button class="accordion">Starter</button>
+			<div class="panel">
+			  <p>Lorem ipsum...</p>
+			</div>
+
+		<button class="accordion">Main</button>
+			<div class="panel">
+			  <p>Lorem ipsum...</p>
+			</div>
+
+		<button class="accordion">Side</button>
+			<div class="panel">
+			  <p>Lorem ipsum...</p>
+			</div>
+		
+		<button class="accordion">Breakfast</button>
+			<div class="panel">
+			  <p>Lorem ipsum...</p>
+			</div>
+
+		<button class="accordion">Lunch</button>
+			<div class="panel">
+			  <p>Lorem ipsum...</p>
+			</div>
+
+		<button class="accordion">Dessert</button>
+			<div class="panel">
+			  <p>Lorem ipsum...</p>
+			</div>
+		
+	</div>
+	
+	<div id="footer">Copyright 2016 Claire Purslow</div>
+	
+</div>
+<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+    }
+}
+</script>
+</body>
+</html>
